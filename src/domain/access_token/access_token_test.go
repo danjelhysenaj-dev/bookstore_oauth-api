@@ -1,6 +1,7 @@
 package access_token
 
 import (
+	"github.com/stretchr/testify/assert"
 	"testing"
 	"time"
 )
@@ -9,6 +10,7 @@ func TestAccessTokenConstants(t *testing.T) {
 	if expirationTime != 24 {
 		t.Error("expiration time should be 24 hours")
 	}
+	assert.EqualValues(t, 24, expirationTime, "expiration time should be 24 hours")
 }
 func TestGetNewAccessToken(t *testing.T) {
 	at := GetNewAccessToken()
