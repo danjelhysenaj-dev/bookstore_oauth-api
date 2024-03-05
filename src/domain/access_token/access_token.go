@@ -11,7 +11,7 @@ const (
 )
 
 type AccessToken struct {
-	AccessToken string `json:"access_token"`
+	AccessToken string `json:"access_token_http"`
 	UserId      int64  `json:"user_id"`
 	ClientId    int64  `json:"client_id"`
 	Expires     int64  `json:"expires"`
