@@ -2,7 +2,8 @@ package http
 
 // This is like a Controller
 import (
-	"github.com/danjelhysenaj-dev/bookstore_auth-api/src/domain/access_token"
+	atDomain "github.com/danjelhysenaj-dev/bookstore_auth-api/src/domain/access_token"
+	"github.com/danjelhysenaj-dev/bookstore_auth-api/src/services"
 	"github.com/danjelhysenaj-dev/bookstore_auth-api/src/utils/errors"
 	"github.com/gin-gonic/gin"
 	"net/http"
@@ -14,10 +15,10 @@ type AccessTokenHandler interface {
 }
 
 type accessTokenHandler struct {
-	service access_token.Service
+	service services.Service
 }
 
-func NewAccessTokenHandler(service access_token.Service) AccessTokenHandler {
+func NewAccessTokenHandler(service services.Service) AccessTokenHandler {
 	return &accessTokenHandler{
 		service: service,
 	}
@@ -26,21 +27,24 @@ func NewAccessTokenHandler(service access_token.Service) AccessTokenHandler {
 func (handler *accessTokenHandler) GetById(c *gin.Context) {
 	accessToken, err := handler.service.GetById(c.Param("access_token_id"))
 	if err != nil {
-		c.JSON(err.Status, err)
+		c.JSON(err.Status(), err)
 		return
 	}
 	c.JSON(http.StatusOK, accessToken)
 }
 
 func (handler *accessTokenHandler) Create(c *gin.Context) {
-	var at access_token.AccessToken
-	if err := c.ShouldBindJSON(&at); err != nil {
+	var request atDomain.AccessTokenRequest
+	if err := c.ShouldBindJSON(&request); err != nil {
 		restErr := errors.NewBadRequestError("invalid json body")
-		c.JSON(restErr.Status, restErr)
+		c.JSON(restErr.Status(), restErr)
 		return
 	}
-	if err := handler.service.Create(at); err != nil {
-		c.JSON(err.Status, err)
+
+	accessToken, err := handler.service.Create(request)
+	if err != nil {
+		c.JSON(err.Status(), err)
+		return
 	}
-	c.JSON(http.StatusCreated, at)
+	c.JSON(http.StatusCreated, accessToken)
 }
