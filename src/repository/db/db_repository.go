@@ -2,9 +2,9 @@ package db
 
 import (
 	errors2 "errors"
-	"github.com/danjelhysenaj-dev/bookstore_auth-api/src/clients/cassandra"
-	"github.com/danjelhysenaj-dev/bookstore_auth-api/src/domain/access_token"
-	"github.com/danjelhysenaj-dev/bookstore_auth-api/src/utils/errors"
+	"github.com/danjelhysenaj-dev/bookstore_oauth-api/src/clients/cassandra"
+	"github.com/danjelhysenaj-dev/bookstore_oauth-api/src/domain/access_token"
+	"github.com/danjelhysenaj-dev/bookstore_oauth-api/src/utils/errors"
 	"github.com/gocql/gocql"
 )
 

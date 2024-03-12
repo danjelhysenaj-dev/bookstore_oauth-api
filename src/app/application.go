@@ -1,10 +1,10 @@
 package app
 
 import (
-	"github.com/danjelhysenaj-dev/bookstore_auth-api/src/http"
-	"github.com/danjelhysenaj-dev/bookstore_auth-api/src/repository/db"
-	"github.com/danjelhysenaj-dev/bookstore_auth-api/src/repository/rest"
-	"github.com/danjelhysenaj-dev/bookstore_auth-api/src/services"
+	"github.com/danjelhysenaj-dev/bookstore_oauth-api/src/http"
+	"github.com/danjelhysenaj-dev/bookstore_oauth-api/src/repository/db"
+	"github.com/danjelhysenaj-dev/bookstore_oauth-api/src/repository/rest"
+	"github.com/danjelhysenaj-dev/bookstore_oauth-api/src/services"
 	"github.com/gin-gonic/gin"
 )
 

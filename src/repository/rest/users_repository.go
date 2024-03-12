@@ -3,8 +3,8 @@ package rest
 import (
 	"encoding/json"
 	errors2 "errors"
-	"github.com/danjelhysenaj-dev/bookstore_auth-api/src/domain/users"
-	"github.com/danjelhysenaj-dev/bookstore_auth-api/src/utils/errors"
+	"github.com/danjelhysenaj-dev/bookstore_oauth-api/src/domain/users"
+	"github.com/danjelhysenaj-dev/bookstore_oauth-api/src/utils/errors"
 	"github.com/mercadolibre/golang-restclient/rest"
 	"time"
 )

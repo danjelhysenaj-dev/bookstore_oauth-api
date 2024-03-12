@@ -2,9 +2,9 @@ package http
 
 // This is like a Controller
 import (
-	atDomain "github.com/danjelhysenaj-dev/bookstore_auth-api/src/domain/access_token"
-	"github.com/danjelhysenaj-dev/bookstore_auth-api/src/services"
-	"github.com/danjelhysenaj-dev/bookstore_auth-api/src/utils/errors"
+	atDomain "github.com/danjelhysenaj-dev/bookstore_oauth-api/src/domain/access_token"
+	"github.com/danjelhysenaj-dev/bookstore_oauth-api/src/services"
+	"github.com/danjelhysenaj-dev/bookstore_oauth-api/src/utils/errors"
 	"github.com/gin-gonic/gin"
 	"net/http"
 )

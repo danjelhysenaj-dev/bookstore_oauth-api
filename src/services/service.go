@@ -1,10 +1,10 @@
 package services
 
 import (
-	"github.com/danjelhysenaj-dev/bookstore_auth-api/src/domain/access_token"
-	"github.com/danjelhysenaj-dev/bookstore_auth-api/src/repository/db"
-	"github.com/danjelhysenaj-dev/bookstore_auth-api/src/repository/rest"
-	"github.com/danjelhysenaj-dev/bookstore_auth-api/src/utils/errors"
+	"github.com/danjelhysenaj-dev/bookstore_oauth-api/src/domain/access_token"
+	"github.com/danjelhysenaj-dev/bookstore_oauth-api/src/repository/db"
+	"github.com/danjelhysenaj-dev/bookstore_oauth-api/src/repository/rest"
+	"github.com/danjelhysenaj-dev/bookstore_oauth-api/src/utils/errors"
 	"strings"
 )
 
