@@ -2,8 +2,8 @@ package access_token
 
 import (
 	"fmt"
-	"github.com/danjelhysenaj-dev/bookstore_auth-api/src/utils/crypto_utils"
-	"github.com/danjelhysenaj-dev/bookstore_auth-api/src/utils/errors"
+	"github.com/danjelhysenaj-dev/bookstore_oauth-api/src/utils/crypto_utils"
+	"github.com/danjelhysenaj-dev/bookstore_oauth-api/src/utils/errors"
 	"strings"
 	"time"
 )
