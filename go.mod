@@ -1,4 +1,4 @@
-module github.com/danjelhysenaj-dev/bookstore_auth-api
+module github.com/danjelhysenaj-dev/bookstore_oauth-api
 
 go 1.22.0
 
